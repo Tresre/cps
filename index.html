@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>CPS Tester</title>
 <style>
 @import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
 html {
@@ -67,17 +68,20 @@ html {
     background-color: #2196F3;
   }
 </style>
-<title>CPS Tester</title>
 
 <body>
   <div class="time">Time Elapsed: <span id="time">0:00</span></div>
   <div class="buttonContainer">
-    <a class="button"><br>Clicks: <span id="clicks">0</span><br><br></a>
+    <a class="button" onClick="buttonClick()"><br>Clicks: <span id="clicks">0</span><br><br></a>
   </div>
 </body>
 
 <script>
-
+var clicks = 0;
+function buttonClick() {
+	++clicks;
+    document.getElementById("clicks").innerHTML = clicks;
+}
 </script>
 
 </html>
