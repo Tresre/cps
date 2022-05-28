@@ -6,6 +6,7 @@ html {
     font-family: Source Code Pro;
     font-size: 20px;
     font-weight: 600;
+    text-decoration: none;
   }
   .time {
     position: relative;
@@ -48,7 +49,6 @@ html {
     width: 80%;
     padding: 7px;
     margin: auto;
-    text-decoration: none;
   }
   .button:hover {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));
