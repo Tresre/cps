@@ -70,9 +70,9 @@ html {
 </style>
 
 <body>
-  <div class="time">Time Elapsed: <span id="time">0:00</span></div>
+  <div class="time"><span id="afinal">Time Elapsed: <span id="time">0:00</span></span></div>
   <div class="buttonContainer">
-    <a class="button" onClick="buttonClick()"><br>Clicks: <span id="clicks">0</span><br><br></a>
+    <a class="button" onClick="buttonClick()"><br><span id="bfinal">Clicks: <span id="clicks">0</span></span><br><br></a>
   </div>
 </body>
 
@@ -81,10 +81,15 @@ var clicks = 0;
 var seconds = 0;
 var ms = 0;
 var started;
+var finished;
 function buttonClick() {
-	++clicks;
-    document.getElementById("clicks").innerHTML = clicks;
-    if (started !== true) {startTest();}
+	if (finished !== true) {
+    	++clicks;
+    	document.getElementById("clicks").innerHTML = clicks;
+    	if (started !== true) {startTest();}
+    } else {
+    	location.reload();
+    }
 }
 
 function startTest() {
@@ -102,7 +107,10 @@ function startTest() {
         }
         if (seconds == 10) {
         	clearInterval(interval);
-            alert("finished");
+            var finalcps = clicks / 10;
+            final = true;
+            document.getElementById("afinal").innerHTML = "Your CPS: " + finalcps + "cps";
+            document.getElementById("bfinal").innerHTML = "Click to try again!";
         }
     }, 10);
 }
