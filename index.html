@@ -70,9 +70,9 @@ html {
 </style>
 
 <body>
-  <div class="time"><span id="afinal">Time Elapsed: <span id="time">0:00</span></span></div>
+  <div class="time"><span id="final">Time Elapsed: <span id="time">0:00</span></span></div>
   <div class="buttonContainer">
-    <a class="button" onClick="buttonClick()"><br><span id="bfinal">Clicks: <span id="clicks">0</span></span><br><br></a>
+    <a class="button" onClick="buttonClick()"><br><span id="clicks">Click To Begin!</span><br><br></a>
   </div>
 </body>
 
@@ -85,7 +85,7 @@ var finished;
 function buttonClick() {
 	if (finished !== true) {
     	++clicks;
-    	document.getElementById("clicks").innerHTML = clicks;
+    	document.getElementById("clicks").innerHTML = "Clicks: " + clicks;
     	if (started !== true) {startTest();}
     } else {
     	location.reload();
@@ -108,9 +108,9 @@ function startTest() {
         if (seconds == 10) {
         	clearInterval(interval);
             var finalcps = clicks / 10;
-            document.getElementById("afinal").innerHTML = "Your CPS: " + finalcps + "cps";
+            document.getElementById("final").innerHTML = "Your CPS: " + finalcps + "cps";
             setTimeout(function() {
-              document.getElementById("bfinal").innerHTML = "Click to try again!";
+              document.getElementById("clicks").innerHTML = "Click to try again!";
               finished = true;
             }, 3000);
         }
