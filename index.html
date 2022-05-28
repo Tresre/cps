@@ -97,12 +97,11 @@ function startTest() {
         	document.getElementById("time").innerHTML = (seconds + ":" + ms);
         }
         if (ms > 98) {
-        	ms = 0; 
+        	ms = 0;
             ++seconds;
         }
         if (seconds == 10) {
         	clearInterval(interval);
-            document.getElementById("time").innerHTML = (seconds + ":" + ms + "0");
             alert("finished");
         }
     }, 10);
