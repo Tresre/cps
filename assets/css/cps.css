@@ -1,13 +1,4 @@
-html {
-    background-color: #1e1e1e;
-    -webkit-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    font-family: Source Code Pro;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-  }
+  html {background-color: #1e1e1e;-webkit-user-select: none;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;font-family: Source Code Pro;font-size: 20px;font-weight: 600;text-decoration: none;}
   .time {
     position: relative;
     display: block;
@@ -50,11 +41,5 @@ html {
     padding: 7px;
     margin: auto;
   }
-  .button:hover {
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));
-    transform: scale(1.05);
-  }
-  .button:active {
-    transform: scale(0.95);
-    background-color: #2196F3;
-  }
+  .button:hover {filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));transform: scale(1.05);}
+  .button:active {transform: scale(0.95);background-color: #2196F3;}
