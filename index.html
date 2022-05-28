@@ -108,9 +108,11 @@ function startTest() {
         if (seconds == 10) {
         	clearInterval(interval);
             var finalcps = clicks / 10;
-            final = true;
             document.getElementById("afinal").innerHTML = "Your CPS: " + finalcps + "cps";
-            document.getElementById("bfinal").innerHTML = "Click to try again!";
+            setTimeout(function() {
+              document.getElementById("bfinal").innerHTML = "Click to try again!";
+              finished = true;
+            }, 3000);
         }
     }, 10);
 }
